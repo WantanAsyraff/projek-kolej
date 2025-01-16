@@ -1,0 +1,16 @@
+Question Number,Question,A,B,C,D,Answer
+1,What does HTML stand for?,Hyperlinks Text Markup Language,Hyper Text Markup Language,Home Tool Markup Language,Hyperlinking Text Management Language,B
+2,Which language is used for web development?,Python,C++,JavaScript,Swift,C
+3,What does CSS stand for?,Cascading Style Sheets,Cascading Simple Sheets,Colorful Style Sheets,Creative Style Sheets,A
+4,Which of these is a backend language?,HTML,CSS,JavaScript,Python,D
+5,What is the main purpose of JavaScript?,Structure of web pages,Styling of web pages,Interactivity on web pages,None of the above,C
+6,What does IDE stand for?,Integrated Development Environment,Internal Development Environment,Integrated Deployment Environment,Internal Deployment Environment,A
+7,What is a variable in programming?,A container for data,A type of loop,A type of function,None of the above,A
+8,Which of these is not a programming paradigm?,Object-Oriented,Functional,Procedural,Binary,D
+9,Which symbol is used for comments in Python?,#,//,/* */,--,A
+10,What is the output of: print(2 ** 3)?,5,6,8,9,C
+11,Which of these is not a data type in Python?,List,Tuple,Dictionary,Tree,D
+12,What is the purpose of loops in programming?,To execute a block of code repeatedly,To define variables,To comment code,To call functions,A
+13,Which of these is an immutable data type in Python?,List,Dictionary,Tuple,Set,C
+14,Which function is used to output text in Python?,print(),output(),echo(),display(),A
+15,Which operator is used for equality comparison in Python?,==,=,!=,>=,A

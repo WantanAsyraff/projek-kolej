@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://csehdgr87gaud"
+
+[deps]
+
+files=["res://question sets/question_set.Question.translation", "res://question sets/question_set.A.translation", "res://question sets/question_set.B.translation", "res://question sets/question_set.en.translation", "res://question sets/question_set.D.translation", "res://question sets/question_set.Answer.translation"]
+
+source_file="res://question sets/question_set.csv"
+dest_files=["res://question sets/question_set.Question.translation", "res://question sets/question_set.A.translation", "res://question sets/question_set.B.translation", "res://question sets/question_set.en.translation", "res://question sets/question_set.D.translation", "res://question sets/question_set.Answer.translation"]
+
+[params]
+
+compress=true
+delimiter=0
