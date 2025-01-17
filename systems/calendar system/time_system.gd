@@ -1,3 +1,6 @@
+class_name time_system
+#To reference this system, make an instance and use its obj
+
 extends Node
 
 #Calendar system
@@ -6,9 +9,10 @@ var current_month: int = 1
 var current_year: int = 2025
 
 #Hour system
-var minute: int = 0
-var hour: int = 0
-var ampm: String #AM is default
+var current_hour: int = 6
+var current_minute: int = 0
+var ampm = true # true means "AM", false means "PM"
+var ampm_str: String
 
 """
 func _ready() -> void:
@@ -31,29 +35,45 @@ func days_in_months(year: int):
 		days_in_months[1] = 29
 	return days_in_months
 
-#Update the time
-func update_time(minute: int, hour: int):
-	if minute > 60:
-		minute = 0
-		hour += 1
-	
-	if hour >= 12:
-		hour = 0
-		increment_day(current_day, current_month, current_year)
+func update_time(added_minute: int, added_hour: int) -> void:
+	increment_time(added_minute, added_hour)
 
-func get_twelve_hour_formatted_time() -> String:
-	ampm = "AM" # Default
-	var display_hour = hour
+func update_day() -> void:
+	increment_day(current_day, current_month, current_year)
+
+#Update the time
+func increment_time(added_minute: int, added_hour: int):
 	
-	if display_hour == 0:
-		display_hour = 12
-		ampm = "AM"
-	elif display_hour == 12:
-		ampm = "PM"
-	elif display_hour > 12:
-		display_hour -= 12
-		ampm = "PM"
-	return ampm
+	#Update minute and hour
+	current_hour += added_hour
+	current_minute += added_minute
+	
+	#Handle minutes to hours
+	if current_minute >= 60:
+		current_minute -= 60
+		current_hour += 1
+	
+	#Handle hours and ampm
+	if current_hour > 12:
+		current_hour -= 12
+		ampm = not ampm
+	elif current_hour == 12 and current_minute == 0:
+		ampm = not ampm
+	#get_twelve_hour_formatted_time()
+	
+	#Transition to next day
+	if current_hour == 12 and current_minute == 0:
+		if ampm == false:
+			increment_day(current_day, current_month, current_year) 
+		ampm = not ampm
+
+#Get the 12-hour format
+func get_twelve_hour_formatted_time() -> String:
+	if ampm:
+		ampm_str = "AM"
+	else:
+		ampm_str = "PM"
+	return ampm_str
 
 #Update to next day
 func increment_day(day: int, month: int, year: int):

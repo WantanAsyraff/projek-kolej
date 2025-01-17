@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbaqb5an5uuc0"]
+[gd_scene load_steps=3 format=3 uid="uid://dbaqb5an5uuc0"]
 
 [ext_resource type="Script" path="res://systems/calendar system/time_system.gd" id="1_yk64r"]
+[ext_resource type="Script" path="res://temp/temp_date.gd" id="2_0l6xo"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_yk64r")
@@ -9,3 +10,4 @@ script = ExtResource("1_yk64r")
 offset_right = 40.0
 offset_bottom = 23.0
 text = "DATE"
+script = ExtResource("2_0l6xo")

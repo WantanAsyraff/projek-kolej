@@ -1,3 +1,4 @@
+class_name quiz_loader
 extends Node
 
 """
