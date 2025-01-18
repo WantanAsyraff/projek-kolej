@@ -1,7 +1,7 @@
-class_name time_system
+class_name time_system extends Node
 #To reference this system, make an instance and use its obj
 
-extends Node
+
 
 #Calendar system
 var current_day: int = 1
@@ -9,8 +9,8 @@ var current_month: int = 1
 var current_year: int = 2025
 
 #Hour system
-var current_hour: int = 6
-var current_minute: int = 0
+var current_hour: int = 06
+var current_minute: int = 00
 var ampm = true # true means "AM", false means "PM"
 var ampm_str: String
 
@@ -24,13 +24,14 @@ func _ready() -> void:
 
 #Consider for leap year in february (28th and 29th)
 func check_leap_year(year: int) -> bool:
-	#If it's divisible by 4 or 400; Consider for years divisible by 100 because these years had too
+	#If it's divisible by 4 or 400
+	#Consider for years divisible by 100 because these years had too
 	#Many leap years accumulating
 	return (year % 4 == 0 and year % 100 !=0) or (year % 400 == 0)
 
 #Update the days in month if there is a leap year
 func days_in_months(year: int):
-	var days_in_months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]
+	var days_in_months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 	if check_leap_year(current_year):
 		days_in_months[1] = 29
 	return days_in_months

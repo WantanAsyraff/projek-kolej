@@ -1,5 +1,4 @@
-class_name quiz_loader
-extends Node
+class_name quiz_loader extends Node
 
 """
 Row Examples:
@@ -27,7 +26,7 @@ var rows: Array = []
 
 func _ready() -> void:
 	load_question_set()
-	get_cell(0, 0)
+	get_cell(1, 1)
 
 # Acessing a single cell
 func get_cell(row: int, column: int):

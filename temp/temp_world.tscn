@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dncq24gvkdlvc"]
+
+[ext_resource type="Script" path="res://systems/quiz system/QSL/quiz_system_loader.gd" id="1_ejjhx"]
+[ext_resource type="Texture2D" uid="uid://d1vfld5ivnl7s" path="res://icon.svg" id="1_jvwdb"]
+[ext_resource type="PackedScene" uid="uid://bdjxl8jw0b5d0" path="res://scenes/player/player.tscn" id="2_bheto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vp0d4"]
+size = Vector2(128, 132)
+
+[node name="TempWorld" type="Node2D"]
+script = ExtResource("1_ejjhx")
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(633, 728)
+scale = Vector2(11.9688, 2.26562)
+texture = ExtResource("1_jvwdb")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vp0d4")
+
+[node name="Player" parent="." instance=ExtResource("2_bheto")]
+position = Vector2(626, 338)

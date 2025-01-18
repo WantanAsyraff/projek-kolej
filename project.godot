@@ -16,6 +16,13 @@ run/main_scene="res://systems/quiz system/systemp.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=2
+window/stretch/mode="viewport"
+
 [input]
 
 debug_increments={

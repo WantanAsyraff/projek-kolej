@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug_increments"):
 		#calendar.update_day()
 		calendar.update_time(10, 0)
+		
 
 func date():
 	var diw = calendar.read_day_in_week()
