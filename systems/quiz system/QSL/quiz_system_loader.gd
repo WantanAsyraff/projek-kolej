@@ -1,4 +1,4 @@
-class_name quiz_loader extends Node
+class_name quiz_system_loader extends Node
 
 """
 Row Examples:
@@ -19,19 +19,22 @@ Column Examples:
 	D = get_column(5)
 	Answer = get_column(6)
 	---------------------
+	
+	to load question:
+	load_question_set()
+	get_cell(1, 1)
 """
 
 var path: String = "res://question sets/question_set.csv"
 var rows: Array = []
 
-func _ready() -> void:
-	load_question_set()
-	get_cell(1, 1)
-
-# Acessing a single cell
+#Acessing a single cell
 func get_cell(row: int, column: int):
 	if row < rows.size() and column < rows[row].size():
 		print("Cell [Row", row, ", Column", column, "]:", rows[row][column])
+		return rows[row][column]
+	else:
+		return "No questions found"
 
 
 # Load via lecturer set path
@@ -50,7 +53,7 @@ func parse_question_set(filepath: String) -> Array:
 				data.append(line.split(","))
 		return data
 	else:
-		print("Error opening file at " + filepath)
+		print("Error opening file at " + filepath + "\nAdd a readd a new question_set")
 		return []
 
 # Get the column from the row

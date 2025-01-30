@@ -1,7 +1,7 @@
 class_name energy_system extends Node
 
-var max_energy: int = 260
-var current_energy: int = 260
+var max_energy: int = Global_Player.max_energy
+var current_energy: int = Global_Player.current_energy
 
 func change_max_energy(energy_set: int):
 	max_energy = energy_set

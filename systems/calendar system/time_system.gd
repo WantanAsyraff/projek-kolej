@@ -1,6 +1,10 @@
 class_name time_system extends Node
 #To reference this system, make an instance and use its obj
-
+"""
+Allow us all say our prayers for a momentary instant 
+for this hath taken me hours to figure out parsing
+- Wantan
+"""
 
 
 #Calendar system
@@ -30,7 +34,7 @@ func check_leap_year(year: int) -> bool:
 	return (year % 4 == 0 and year % 100 !=0) or (year % 400 == 0)
 
 #Update the days in month if there is a leap year
-func days_in_months(year: int):
+func days_in_months(_year: int):
 	var days_in_months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 	if check_leap_year(current_year):
 		days_in_months[1] = 29
@@ -77,7 +81,7 @@ func get_twelve_hour_formatted_time() -> String:
 	return ampm_str
 
 #Update to next day
-func increment_day(day: int, month: int, year: int):
+func increment_day(_day: int, _month: int, _year: int):
 	var day_months = days_in_months(current_year)
 	current_day += 1
 	

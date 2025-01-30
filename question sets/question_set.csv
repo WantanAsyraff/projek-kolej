@@ -1,16 +1,11 @@
 Question Number,Question,A,B,C,D,Answer
-1,What does HTML stand for?,Hyperlinks Text Markup Language,Hyper Text Markup Language,Home Tool Markup Language,Hyperlinking Text Management Language,B
-2,Which language is used for web development?,Python,C++,JavaScript,Swift,C
-3,What does CSS stand for?,Cascading Style Sheets,Cascading Simple Sheets,Colorful Style Sheets,Creative Style Sheets,A
-4,Which of these is a backend language?,HTML,CSS,JavaScript,Python,D
-5,What is the main purpose of JavaScript?,Structure of web pages,Styling of web pages,Interactivity on web pages,None of the above,C
-6,What does IDE stand for?,Integrated Development Environment,Internal Development Environment,Integrated Deployment Environment,Internal Deployment Environment,A
-7,What is a variable in programming?,A container for data,A type of loop,A type of function,None of the above,A
-8,Which of these is not a programming paradigm?,Object-Oriented,Functional,Procedural,Binary,D
-9,Which symbol is used for comments in Python?,#,//,/* */,--,A
-10,What is the output of: print(2 ** 3)?,5,6,8,9,C
-11,Which of these is not a data type in Python?,List,Tuple,Dictionary,Tree,D
-12,What is the purpose of loops in programming?,To execute a block of code repeatedly,To define variables,To comment code,To call functions,A
-13,Which of these is an immutable data type in Python?,List,Dictionary,Tuple,Set,C
-14,Which function is used to output text in Python?,print(),output(),echo(),display(),A
-15,Which operator is used for equality comparison in Python?,==,=,!=,>=,A
+1,What is the primary motivation for consumer purchases?,Price,Quality,Brand Loyalty,Convenience,B
+2,Which of the following is an internal factor influencing consumer behavior?,Culture,Social Status,Personality,Government Policy,C
+3,What is the first stage in the consumer decision-making process?,Information Search,Problem Recognition,Evaluation of Alternatives,Purchase Decision,B
+4,Which of these is a psychological factor that affects consumer behavior?,Income,Perception,Family,Occupation,B
+5,What does the term 'post-purchase dissonance' refer to?,Satisfaction after buying a product,Doubt about a purchase after buying,Comparing with similar products after buying,Referring the product to others,B
+6,Which market segmentation strategy focuses on dividing consumers based on age, gender, or income?,Psychographic Segmentation,Geographic Segmentation,Behavioral Segmentation,Demographic Segmentation,D
+7,What type of buying behavior involves low consumer involvement and significant differences between brands?,Complex Buying Behavior,Dissonance-Reducing Buying Behavior,Variety-Seeking Buying Behavior,Habitual Buying Behavior,C
+8,Which of these is an example of situational factors affecting consumer behavior?,Product Features,Discount Offers,Consumer Attitude,Lifestyle,B
+9,What is a key characteristic of habitual buying behavior?,High involvement,Low involvement with few perceived brand differences,Frequent changes in preference,Focus on cultural influence,B
+10,What is the concept of 'brand equity'?,A measure of a brand's financial value,A brand's market share percentage,The added value a brand gives to a product,The social status linked to a brand,C

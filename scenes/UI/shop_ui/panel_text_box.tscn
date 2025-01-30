@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://chvo3b6jcjd10"]
+
+[node name="panelTextBox" type="Panel"]
+anchors_preset = -1
+anchor_right = 0.598
+anchor_bottom = 0.254
+offset_right = 0.559937
+offset_bottom = 0.119995
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="labelTextBox" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = 21.0
+offset_right = -25.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1

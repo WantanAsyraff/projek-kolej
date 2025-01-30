@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=4 uid="uid://djbvegg6xpxtn"]
+
+[ext_resource type="PackedScene" uid="uid://ddfmsa1dys24h" path="res://scenes/UI/overworld_ui.tscn" id="1_bfrxe"]
+[ext_resource type="PackedScene" uid="uid://bnyeqs685qk8n" path="res://resources/sprites/temp/temp_tilemap.tscn" id="2_jq006"]
+[ext_resource type="PackedScene" uid="uid://cpk7ot0wb2bbc" path="res://scenes/rooms/next_room/next_room.tscn" id="5_5y632"]
+[ext_resource type="PackedScene" uid="uid://bdjxl8jw0b5d0" path="res://scenes/player/player.tscn" id="5_e0h3j"]
+[ext_resource type="PackedScene" uid="uid://n4dblpsj602a" path="res://scenes/player/player_camera.tscn" id="6_ba4a3"]
+[ext_resource type="PackedScene" uid="uid://ctrpqxl0pat56" path="res://scenes/door/door.tscn" id="6_uyhmo"]
+[ext_resource type="PackedScene" uid="uid://dncq24gvkdlvc" path="res://temp/temp_world.tscn" id="7_tl7ip"]
+
+[node name="RoomTemplate" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OverworldUi" parent="CanvasLayer" instance=ExtResource("1_bfrxe")]
+
+[node name="temp_tilemap" parent="." instance=ExtResource("2_jq006")]
+tile_map_data = PackedByteArray("AAAAAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAASAAkAAAAAAAAAAAATAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAASAAoAAAAAAAAAAAATAAoAAAAAAAAAAAD//wkAAAAAAAAAAAD//woAAAAAAAAAAAD+/woAAAAAAAAAAAD+/wkAAAAAAAAAAAD9/wkAAAAAAAAAAAD9/woAAAAAAAAAAAD9/wgAAAAAAAAAAAD9/wcAAAAAAAAAAAD9/wYAAAAAAAAAAAD9/wUAAAAAAAAAAAD9/wQAAAAAAAAAAAAUAAkAAAAAAAAAAAAVAAkAAAAAAAAAAAAWAAkAAAAAAAAAAAAXAAkAAAAAAAAAAAAYAAkAAAAAAAAAAAAYAAoAAAAAAAAAAAAXAAoAAAAAAAAAAAAWAAoAAAAAAAAAAAAVAAoAAAAAAAAAAAAUAAoAAAAAAAAAAAAZAAkAAAAAAAAAAAAZAAoAAAAAAAAAAAAaAAkAAAAAAAAAAAAaAAoAAAAAAAAAAAAbAAoAAAAAAAAAAAAbAAkAAAAAAAAAAAAcAAkAAAAAAAAAAAAcAAoAAAAAAAAAAAAdAAoAAAAAAAAAAAAeAAoAAAAAAAAAAAAeAAkAAAAAAAAAAAAdAAkAAAAAAAAAAAAfAAoAAAAAAAAAAAAfAAkAAAAAAAAAAAAfAAgAAAAAAAAAAAAfAAcAAAAAAAAAAAAfAAYAAAAAAAAAAAAfAAUAAAAAAAAAAAAfAAQAAAAAAAAAAAAfAAMAAAAAAAAAAAA=")
+
+[node name="Player" parent="." instance=ExtResource("5_e0h3j")]
+position = Vector2(1763, 462)
+
+[node name="Camera2D" parent="Player" instance=ExtResource("6_ba4a3")]
+
+[node name="next_room" parent="." instance=ExtResource("5_5y632")]
+position = Vector2(-92, 416)
+next_scene = "room_0"
+
+[node name="Door" parent="." instance=ExtResource("6_uyhmo")]
+position = Vector2(1493, 468)
+room = ExtResource("7_tl7ip")
+minutes_taken = 20
+hours_taken = 1

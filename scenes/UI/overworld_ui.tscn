@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddfmsa1dys24h"]
+
+[ext_resource type="PackedScene" uid="uid://cjoado18nyjws" path="res://scenes/UI/time_ui/panel_time.tscn" id="1_iadll"]
+[ext_resource type="PackedScene" uid="uid://2561d5qfe3yk" path="res://scenes/UI/time_ui/date_ui.tscn" id="2_db276"]
+[ext_resource type="PackedScene" uid="uid://v1ky7rf2ogp8" path="res://scenes/UI/energy_ui/panel_energy.tscn" id="3_r0t8p"]
+
+[node name="OverworldUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_vertical_guides_ = [-375.0]
+
+[node name="panelTime" parent="." instance=ExtResource("1_iadll")]
+layout_mode = 1
+anchor_left = 0.722
+anchor_top = 0.019
+anchor_right = 0.882
+anchor_bottom = 0.093
+offset_left = -0.160095
+offset_top = 0.319999
+offset_right = 0.039917
+offset_bottom = 0.0400162
+
+[node name="panelDate" parent="." instance=ExtResource("2_db276")]
+layout_mode = 1
+anchor_left = 0.008
+anchor_top = 0.014
+anchor_right = 0.233
+anchor_bottom = 0.145
+offset_left = -0.240001
+offset_top = -0.0799999
+offset_right = -0.240051
+offset_bottom = 0.319969
+
+[node name="panel_energy" parent="." instance=ExtResource("3_r0t8p")]
+layout_mode = 1
+anchor_left = 0.008
+anchor_top = 0.153
+anchor_right = 0.172
+anchor_bottom = 0.236
+offset_left = -0.240001
+offset_top = -0.160011
+offset_right = -0.160004
+offset_bottom = 0.0799866

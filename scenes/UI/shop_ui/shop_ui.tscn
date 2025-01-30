@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3omgtxgop0ie"]
+
+[ext_resource type="PackedScene" uid="uid://bdmggk0fqjugj" path="res://scenes/UI/shop_ui/panel_item.tscn" id="1_0gaqf"]
+[ext_resource type="PackedScene" uid="uid://by2bj8ev2vr01" path="res://scenes/UI/shop_ui/panel_choice_box.tscn" id="1_nnec7"]
+[ext_resource type="PackedScene" uid="uid://chvo3b6jcjd10" path="res://scenes/UI/shop_ui/panel_text_box.tscn" id="3_4c2j5"]
+
+[node name="ShopUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="shopBG" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="panelCharBox" type="Panel" parent="shopBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.028
+anchor_right = 0.623
+anchor_bottom = 0.704
+offset_left = -0.480001
+offset_top = -0.16
+offset_right = -11.4401
+offset_bottom = 0.119965
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="panelItem" parent="shopBG" instance=ExtResource("1_0gaqf")]
+layout_mode = 1
+offset_left = 0.279968
+offset_right = 0.47998
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="panelChoiceBox" parent="." instance=ExtResource("1_nnec7")]
+layout_mode = 1
+anchor_left = 0.623
+anchor_top = 0.717
+anchor_right = 0.985
+anchor_bottom = 0.971
+offset_left = -0.440063
+offset_top = -0.23999
+offset_right = 0.199829
+offset_bottom = -0.120056
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="panelTextBox" parent="." instance=ExtResource("3_4c2j5")]
+layout_mode = 1
+anchor_left = 0.016
+anchor_top = 0.715
+anchor_right = 0.614
+anchor_bottom = 0.969
+offset_left = -0.480001
+offset_top = 0.199951
+offset_right = 0.079895
+offset_bottom = 0.319946
+grow_horizontal = 1
+grow_vertical = 1

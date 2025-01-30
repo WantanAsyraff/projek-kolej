@@ -1,8 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dncq24gvkdlvc"]
+[gd_scene load_steps=13 format=4 uid="uid://dncq24gvkdlvc"]
 
 [ext_resource type="Script" path="res://systems/quiz system/QSL/quiz_system_loader.gd" id="1_ejjhx"]
-[ext_resource type="Texture2D" uid="uid://d1vfld5ivnl7s" path="res://icon.svg" id="1_jvwdb"]
+[ext_resource type="Texture2D" uid="uid://b0b48ys2vcam" path="res://icon.svg" id="1_jvwdb"]
 [ext_resource type="PackedScene" uid="uid://bdjxl8jw0b5d0" path="res://scenes/player/player.tscn" id="2_bheto"]
+[ext_resource type="PackedScene" uid="uid://n4dblpsj602a" path="res://scenes/player/player_camera.tscn" id="4_a1dj1"]
+[ext_resource type="PackedScene" uid="uid://ddfmsa1dys24h" path="res://scenes/UI/overworld_ui.tscn" id="4_ysuuk"]
+[ext_resource type="PackedScene" uid="uid://ctrpqxl0pat56" path="res://scenes/door/door.tscn" id="6_u346g"]
+[ext_resource type="PackedScene" uid="uid://c7jfgw54uj8cw" path="res://scenes/rooms/inside_classroom/quiz_minigame.tscn" id="7_utcns"]
+[ext_resource type="PackedScene" uid="uid://c3omgtxgop0ie" path="res://scenes/UI/shop_ui/shop_ui.tscn" id="8_nkoks"]
+[ext_resource type="PackedScene" uid="uid://bnyeqs685qk8n" path="res://resources/sprites/temp/temp_tilemap.tscn" id="8_p6mc3"]
+[ext_resource type="PackedScene" uid="uid://beikilf3ogwqn" path="res://scenes/UI/transition_screen.tscn" id="9_3j7kd"]
+[ext_resource type="PackedScene" uid="uid://cpk7ot0wb2bbc" path="res://scenes/rooms/next_room/next_room.tscn" id="10_x6cxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp0d4"]
 size = Vector2(128, 132)
@@ -11,8 +19,9 @@ size = Vector2(128, 132)
 script = ExtResource("1_ejjhx")
 
 [node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(633, 728)
-scale = Vector2(11.9688, 2.26562)
+visible = false
+position = Vector2(160.502, 728)
+scale = Vector2(27.6328, 2.26562)
 texture = ExtResource("1_jvwdb")
 metadata/_edit_group_ = true
 
@@ -23,3 +32,29 @@ shape = SubResource("RectangleShape2D_vp0d4")
 
 [node name="Player" parent="." instance=ExtResource("2_bheto")]
 position = Vector2(626, 338)
+
+[node name="Camera2D" parent="Player" instance=ExtResource("4_a1dj1")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OverworldUi" parent="CanvasLayer" instance=ExtResource("4_ysuuk")]
+
+[node name="Door" parent="." instance=ExtResource("6_u346g")]
+position = Vector2(246, 467)
+room = ExtResource("7_utcns")
+energy_cost = 30
+hours_taken = 1
+
+[node name="Door2" parent="." instance=ExtResource("6_u346g")]
+position = Vector2(-442, 468)
+room = ExtResource("8_nkoks")
+energy_cost = 30
+
+[node name="temp_tilemap" parent="." instance=ExtResource("8_p6mc3")]
+tile_map_data = PackedByteArray("AAD0/wkAAAAAAAAAAAD1/wkAAAAAAAAAAAD2/wkAAAAAAAAAAAD3/wkAAAAAAAAAAAD4/wkAAAAAAAAAAAD5/wkAAAAAAAAAAAD6/wkAAAAAAAAAAAD7/wkAAAAAAAAAAAD8/wkAAAAAAAAAAAD9/wkAAAAAAAAAAAD+/wkAAAAAAAAAAAD//wkAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAASAAkAAAAAAAAAAAATAAkAAAAAAAAAAAAUAAkAAAAAAAAAAAAVAAkAAAAAAAAAAAAWAAkAAAAAAAAAAAAXAAkAAAAAAAAAAAAYAAkAAAAAAAAAAADz/wkAAAAAAAAAAADy/wkAAAAAAAAAAADx/wkAAAAAAAAAAADw/wkAAAAAAAAAAADv/wkAAAAAAAAAAADu/wkAAAAAAAAAAADt/wkAAAAAAAAAAADs/wkAAAAAAAAAAAAZAAkAAAAAAAAAAAAaAAkAAAAAAAAAAAAbAAkAAAAAAAAAAAAcAAkAAAAAAAAAAADr/wkAAAAAAAAAAADr/wgAAAAAAAAAAADr/wcAAAAAAAAAAADr/wYAAAAAAAAAAADr/wUAAAAAAAAAAAA=")
+
+[node name="transition_screen" parent="." instance=ExtResource("9_3j7kd")]
+
+[node name="next_room" parent="." instance=ExtResource("10_x6cxp")]
+position = Vector2(-1246, 421)
+next_scene = "room_1"

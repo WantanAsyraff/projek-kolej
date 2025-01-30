@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://by2bj8ev2vr01"]
+
+[ext_resource type="LabelSettings" uid="uid://db3rkbfyb6f3r" path="res://resources/fonts/tres/default_label.tres" id="1_bmoms"]
+[ext_resource type="Script" path="res://scenes/UI/shop_ui/panel_choice_box.gd" id="1_lh6cy"]
+
+[node name="panelChoiceBox" type="Panel"]
+anchors_preset = -1
+anchor_right = 0.362
+anchor_bottom = 0.254
+offset_right = 0.639862
+offset_bottom = 0.119995
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_lh6cy")
+
+[node name="buttonExit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.675
+anchor_top = 0.055
+anchor_right = 0.976
+anchor_bottom = 0.951
+offset_left = -0.199921
+offset_top = -0.0650005
+offset_right = 0.136078
+offset_bottom = -0.0330048
+grow_horizontal = 0
+grow_vertical = 2
+text = "EXIT"
+
+[node name="buttonBuy" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.024
+anchor_top = 0.06
+anchor_right = 0.662
+anchor_bottom = 0.536
+offset_left = -0.135997
+offset_top = 0.0199995
+offset_right = -0.167938
+offset_bottom = -0.0880051
+grow_horizontal = 2
+grow_vertical = 2
+text = "BUY"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.024
+anchor_top = 0.574
+anchor_right = 0.659
+anchor_bottom = 0.929
+offset_left = -0.135997
+offset_top = -0.0419998
+offset_right = 0.22406
+offset_bottom = -0.00700378
+grow_horizontal = 2
+grow_vertical = 2
+text = "MONEY: 0"
+label_settings = ExtResource("1_bmoms")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="buttonExit" to="." method="_on_button_exit_pressed"]

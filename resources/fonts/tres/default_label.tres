@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://db3rkbfyb6f3r"]
+
+[ext_resource type="FontFile" uid="uid://b4q0jc6ugxqh1" path="res://resources/fonts/tres/default_text.tres" id="1_hx0wf"]
+
+[resource]
+line_spacing = 4.0
+font = ExtResource("1_hx0wf")
+font_size = 19
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.419608)

@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://dncq24gvkdlvc"]
+
+[ext_resource type="Script" path="res://systems/quiz system/QSL/quiz_system_loader.gd" id="1_ejjhx"]
+[ext_resource type="Texture2D" uid="uid://d1vfld5ivnl7s" path="res://icon.svg" id="1_jvwdb"]
+[ext_resource type="PackedScene" uid="uid://bdjxl8jw0b5d0" path="res://scenes/player/player.tscn" id="2_bheto"]
+[ext_resource type="PackedScene" uid="uid://ddfmsa1dys24h" path="res://scenes/UI/overworld_ui.tscn" id="4_ysuuk"]
+[ext_resource type="Script" path="res://systems/camera/camera_room_transition.gd" id="5_qjh6l"]
+[ext_resource type="PackedScene" uid="uid://ctrpqxl0pat56" path="res://scenes/door/door.tscn" id="6_u346g"]
+[ext_resource type="PackedScene" uid="uid://c7jfgw54uj8cw" path="res://scenes/rooms/inside_classroom/quiz_minigame.tscn" id="7_utcns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vp0d4"]
+size = Vector2(128, 132)
+
+[node name="TempWorld" type="Node"]
+script = ExtResource("1_ejjhx")
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(160.502, 728)
+scale = Vector2(27.6328, 2.26562)
+texture = ExtResource("1_jvwdb")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vp0d4")
+
+[node name="Player" parent="." instance=ExtResource("2_bheto")]
+position = Vector2(626, 338)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(16, 24)
+position_smoothing_enabled = true
+script = ExtResource("5_qjh6l")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OverworldUi" parent="CanvasLayer" instance=ExtResource("4_ysuuk")]
+
+[node name="Door" parent="." instance=ExtResource("6_u346g")]
+position = Vector2(-682, 463)
+room = ExtResource("7_utcns")
